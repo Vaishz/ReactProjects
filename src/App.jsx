@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import {Routes, Route, BrowserRouter} from 'react-router-dom'
 import Home from "./Home";
-import About from "./About";
-import Api from "./Api";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
+import Vaish from "./Vaish";
+import Quiz from "./Quiz";
+
+
 
 const App = () => {
   return (
@@ -11,13 +16,9 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/Shweta" element={<Shweta />} />
+          <Route path="/quiz" element={<Quiz />} />
         </Routes>
-      </BrowserRouter>
-
+      </BrowserRouter> 
       <Footer />
     </>
   );
