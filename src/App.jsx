@@ -3,6 +3,7 @@ import Home from "./Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import Vaish from "./Vaish";
 
 
 
@@ -13,6 +14,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/vaish" element={<Vaish />} />
         </Routes>
       </BrowserRouter> 
       <Footer />
