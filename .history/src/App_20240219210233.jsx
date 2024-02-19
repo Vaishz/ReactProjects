@@ -3,6 +3,8 @@ import Home from "./Home";
 import About from "./About";
 import Api from "./Api";
 
+
+
 const App = () => {
   return (
     <>
@@ -13,10 +15,9 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/Shweta" element={<Shweta />} />
         </Routes>
       </BrowserRouter>
-
+     
       <Footer />
     </>
   );
