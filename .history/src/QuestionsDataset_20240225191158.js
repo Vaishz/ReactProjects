@@ -27,7 +27,7 @@ const QuestionsData = [
       option3: "Giraffe",
       option4: "Hippopotamus",
     },
-    correctOption: "Blue Whale",
+    correctOption: "option2",
   },
   {
     question: "Who wrote 'Romeo and Juliet'?",
@@ -37,7 +37,7 @@ const QuestionsData = [
       option3: "Jane Austen",
       option4: "Mark Twain",
     },
-    correctOption: "William Shakespeare",
+    correctOption: "option1",
   },
   {
     question: "Which programming language is often used for web development?",
@@ -47,7 +47,7 @@ const QuestionsData = [
       option3: "JavaScript",
       option4: "C++",
     },
-    correctOption: "JavaScript",
+    correctOption: "option3",
   },
   {
     question: "In which year did World War II end?",
@@ -57,7 +57,7 @@ const QuestionsData = [
       option3: "1950",
       option4: "1939",
     },
-    correctOption: "1945",
+    correctOption: "option2",
   },
   {
     question: "What is the capital of Japan?",
@@ -67,7 +67,7 @@ const QuestionsData = [
       option3: "Tokyo",
       option4: "Bangkok",
     },
-    correctOption: "Tokyo",
+    correctOption: "option3",
   },
   {
     question: "Which element has the chemical symbol 'O'?",

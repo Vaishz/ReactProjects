@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import QuestionsData from './QuestionsDataset';
+import { useState, useEffect } from "react";
+import QuestionsData from "./QuestionsDataset";
+import "./Quiz.css";
 
 const Quiz = () => {
   const [index, setIndex] = useState(0);
@@ -13,11 +14,16 @@ const Quiz = () => {
 
   const checkAnswer = (e, correctOption) => {
     let selectedOption = e.target.textContent;
-    if (selectedOption === correctOption) {
+    console.log(question.correctOption);
+    console.log(selectedOption);
+
+    if (selectedOption === question.correctOption) {
       setPoints((prevPoints) => prevPoints + 1);
       alert("Correct Answer!");
+      e.target.classList.add("correct");
     } else {
       alert("Incorrect :(");
+      e.target.classList.add("wrong");
     }
   };
 
@@ -28,16 +34,47 @@ const Quiz = () => {
   return (
     <>
       <div className="question-card">
-        <h2>{question.question}</h2>
+        <h2>
+          {index + 1}. {question.question}
+        </h2>
         <div className="options">
           <ul>
-            <li onClick={(e) => checkAnswer(e, question.options.option1)}>{question.options.option1}</li>
-            <li onClick={(e) => checkAnswer(e, question.options.option2)}>{question.options.option2}</li>
-            <li onClick={(e) => checkAnswer(e, question.options.option3)}>{question.options.option3}</li>
-            <li onClick={(e) => checkAnswer(e, question.options.option4)}>{question.options.option4}</li>
+            <li
+              onClick={(e) => {
+                checkAnswer(e, 1);
+              }}
+            >
+              <div className="question-number">A</div>
+              <div className="question">{question.options.option1}</div>
+            </li>
+            <li
+              onClick={(e) => {
+                checkAnswer(e, 2);
+              }}
+            >
+              <div className="question-number">B</div>
+              <div className="question">{question.options.option2}</div>
+            </li>
+            <li
+              onClick={(e) => {
+                checkAnswer(e, 3);
+              }}
+            >
+              <div className="question-number">C</div>
+              <div className="question">{question.options.option3}</div>
+            </li>
+            <li
+              onClick={(e) => {
+                checkAnswer(e, 4);
+              }}
+            >
+              <div className="question-number">D</div>
+              <div className="question">{question.options.option4}</div>
+            </li>
           </ul>
         </div>
         <button onClick={handleOnNextClick}>Next</button>
+        <div className="index">1 of 20 questions</div>
       </div>
     </>
   );
